@@ -1,6 +1,6 @@
 package com.onleadyou.artisans.api.dao.contract;
 
-import com.onleadyou.artisans.api.model.Address;
+import com.onleadyou.artisans.api.model.City;
 import com.onleadyou.artisans.api.model.Artisan;
 import com.onleadyou.artisans.api.model.SearchCriteria;
 
@@ -14,5 +14,5 @@ public interface ArtisanRepository {
 
     void updateArtisan(Artisan artisan);
 
-    void updateArtisanAddress(long id, Address location);
+    void updateArtisanAddress(long id, City location);
 }

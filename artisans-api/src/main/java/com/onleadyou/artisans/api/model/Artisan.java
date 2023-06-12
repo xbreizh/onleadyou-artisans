@@ -7,16 +7,14 @@ public class Artisan {
     private long id;
     private String company;
 
-    private Address address;
+    private String address;
 
-    private String firstname;
-    private String lastname;
+    private City city;
     private String email;
     private int phoneNumber;
 
-    private String expertise;
-    private String activity;
-    private List<WorkCategory> workCategoryList;
+    private String specialty;
+    private List<WorkCategory> categoryList;
 
     private List<String> keywords;
 
@@ -39,28 +37,20 @@ public class Artisan {
         this.company = company;
     }
 
-    public Address getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public City getCity() {
+        return city;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setCity(City city) {
+        this.city = city;
     }
 
     public String getEmail() {
@@ -79,28 +69,21 @@ public class Artisan {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getExpertise() {
-        return expertise;
+    public String getSpecialty() {
+        return specialty;
     }
 
-    public void setExpertise(String expertise) {
-        this.expertise = expertise;
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
     }
 
-    public String getActivity() {
-        return activity;
+
+    public List<WorkCategory> getCategoryList() {
+        return categoryList;
     }
 
-    public void setActivity(String activity) {
-        this.activity = activity;
-    }
-
-    public List<WorkCategory> getWorkCategoryList() {
-        return workCategoryList;
-    }
-
-    public void setWorkCategoryList(List<WorkCategory> workCategoryList) {
-        this.workCategoryList = workCategoryList;
+    public void setCategoryList(List<WorkCategory> categoryList) {
+        this.categoryList = categoryList;
     }
 
     public List<String> getKeywords() {
@@ -117,16 +100,13 @@ public class Artisan {
         return "Artisan{" +
                 "id=" + id +
                 ", company='" + company + '\'' +
-                ", address=" + address +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", city=" + city +
                 ", email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +
-                ", expertise='" + expertise + '\'' +
-                ", activity='" + activity + '\'' +
-                ", workCategoryList=" + workCategoryList +
+                ", specialty='" + specialty + '\'' +
+                ", categoryList=" + categoryList +
                 ", keywords=" + keywords +
                 '}';
     }
-
 }

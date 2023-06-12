@@ -1,11 +1,12 @@
 package com.onleadyou.artisans.api.model;
 
-public class Address {
+public class City {
 
-    int number;
-    String main;
+    long id;
 
-    String city;
+    String name;
+
+    String postcode;
 
     String county;
     String country;

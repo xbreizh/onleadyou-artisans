@@ -1,7 +1,7 @@
 package com.onleadyou.artisans.api.service.impl;
 
 import com.onleadyou.artisans.api.dao.contract.ArtisanRepository;
-import com.onleadyou.artisans.api.model.Address;
+import com.onleadyou.artisans.api.model.City;
 import com.onleadyou.artisans.api.model.Artisan;
 import com.onleadyou.artisans.api.model.SearchCriteria;
 import com.onleadyou.artisans.api.service.contract.ArtisanService;
@@ -34,7 +34,7 @@ public class ArtisanServiceImpl implements ArtisanService {
     }
 
     @Override
-    public void updateArtisanAddress(long id, Address location) {
+    public void updateArtisanAddress(long id, City location) {
         repository.updateArtisanAddress(id, location);
     }
 }

@@ -1,7 +1,7 @@
 package com.onleadyou.artisans.api.dao.impl;
 
 import com.onleadyou.artisans.api.dao.contract.ArtisanRepository;
-import com.onleadyou.artisans.api.model.Address;
+import com.onleadyou.artisans.api.model.City;
 import com.onleadyou.artisans.api.model.Artisan;
 import com.onleadyou.artisans.api.model.SearchCriteria;
 import org.springframework.stereotype.Repository;
@@ -32,7 +32,7 @@ public class ArtisanRepositoryImpl implements ArtisanRepository {
     }
 
     @Override
-    public void updateArtisanAddress(long id, Address location) {
+    public void updateArtisanAddress(long id, City location) {
 
     }
 }
