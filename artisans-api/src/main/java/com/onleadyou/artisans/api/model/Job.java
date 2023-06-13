@@ -28,8 +28,8 @@ public final class Job {
     @Override
     public String toString() {
         return "Job{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+        '}';
     }
 }

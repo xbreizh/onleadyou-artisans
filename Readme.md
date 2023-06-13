@@ -1,6 +1,6 @@
 # OnleadYou - Artisan
 
-The project is a Springboot application that deploys simple API allowing to:
+The project is a Springboot application that deploys a simple API allowing to:
     - retrieve artisans based on some search criteria (job, city)
     - update artisans
 
@@ -14,26 +14,29 @@ _Query example:_
 
 ### Get artisan by Search criteria:
 `Get http://localhost:8081/artisans/criteria`
-   `{
+   ```
+   {
         "job": "pLombier",
         "city": "mons"
    }
-   ` 
+   ```
 
 ### Update an artisan:
 
 `Put http://localhost:8080/artisans`
 
-`{
+```
+{
     "id": 1,
     "company": "compagnie Abécé",
     "address": "28, plage du soleil",
     "cities": [
         {
-        "id": 2
+            "id": 2
         }
     ]
 }
-`
+```
 
-_Note_: An artisan can potentially be in several cities and have different jobs
+_Note_: 
+    - An artisan can potentially be in several cities and have different jobs

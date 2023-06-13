@@ -25,8 +25,8 @@ public class SearchCriteria {
     @Override
     public String toString() {
         return "SearchCriteria{" +
-                "job='" + job + '\'' +
-                ", city='" + city + '\'' +
-                '}';
+            "job='" + job + '\'' +
+            ", city='" + city + '\'' +
+        '}';
     }
 }

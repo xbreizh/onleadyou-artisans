@@ -6,10 +6,6 @@ import java.util.Set;
 @Entity
 public class Artisan {
 
-
-    // TODO
-    // Add City, Workcategory, keywords
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -98,13 +94,13 @@ public class Artisan {
     @Override
     public String toString() {
         return "Artisan{" +
-                "id=" + id +
-                ", company='" + company + '\'' +
-                ", address='" + address + '\'' +
-                ", email='" + email + '\'' +
-                ", phonenumber='" + phonenumber + '\'' +
-                ", cities=" + cities +
-                ", jobs=" + jobs +
-                '}';
+            "id=" + id +
+            ", company='" + company + '\'' +
+            ", address='" + address + '\'' +
+            ", email='" + email + '\'' +
+            ", phoneNumber='" + phonenumber + '\'' +
+            ", cities=" + cities +
+            ", jobs=" + jobs +
+        '}';
     }
 }
