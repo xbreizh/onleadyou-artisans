@@ -5,27 +5,37 @@ import com.onleadyou.artisans.api.model.Artisan;
 import com.onleadyou.artisans.api.model.SearchCriteria;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
+
 @Repository
-public class ArtisanRepositoryImpl /*implements ArtisanRepository */{
+public class ArtisanRepositoryImpl implements ArtisanRepository{
 
-/*    @Override
-    public Artisan getArtisanById(long id) {
-        System.out.println("reaching controller");
-        final Artisan artisan = new Artisan();
-        artisan.setCompany("onleadyou");
-        artisan.setId(1);
-        return new Artisan();
+    final EntityManager entityManager;
+
+    public ArtisanRepositoryImpl(final EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     @Override
-    public List<Artisan> getArtisanByCriteria(SearchCriteria criteria) {
-        return null;
+    public Artisan findById(final long id) {
+        final String queryString = "SELECT a FROM Artisan a WHERE a.id = :id";
+        final Query query = entityManager.createQuery(queryString, Artisan.class);
+        query.setParameter("id", id);
+        return (Artisan) query.getSingleResult();
     }
 
     @Override
-    public void updateArtisan(Artisan artisan) {
+    public List<Artisan> searchUserByCriteria(final SearchCriteria criteria) {
+        final String queryString = "SELECT a FROM Artisan a WHERE a.email = :email";
+        final Query query = entityManager.createQuery(queryString, Artisan.class);
+        query.setParameter("email", criteria.getJob());
+        return query.getResultList();
+    }
 
-    }*/
+    @Override
+    public void updateArtisan(final Artisan artisan) {
 
+    }
 }
