@@ -1,22 +1,27 @@
 package com.onleadyou.artisans.api.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.List;
 
+@Entity
 public class Artisan {
 
+
+    // TODO
+    // Add City, Workcategory, keywords
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String company;
 
     private String address;
 
-    private City city;
     private String email;
-    private int phoneNumber;
-
-    private String specialty;
-    private List<WorkCategory> categoryList;
-
-    private List<String> keywords;
+    private String phonenumber;
 
     public Artisan() {
     }
@@ -45,14 +50,6 @@ public class Artisan {
         this.address = address;
     }
 
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -61,39 +58,13 @@ public class Artisan {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
+    public String getPhonenumber() {
+        return phonenumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
-
-    public String getSpecialty() {
-        return specialty;
-    }
-
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
-    }
-
-
-    public List<WorkCategory> getCategoryList() {
-        return categoryList;
-    }
-
-    public void setCategoryList(List<WorkCategory> categoryList) {
-        this.categoryList = categoryList;
-    }
-
-    public List<String> getKeywords() {
-        return keywords;
-    }
-
-    public void setKeywords(List<String> keywords) {
-        this.keywords = keywords;
-    }
-
 
     @Override
     public String toString() {
@@ -101,12 +72,8 @@ public class Artisan {
                 "id=" + id +
                 ", company='" + company + '\'' +
                 ", address='" + address + '\'' +
-                ", city=" + city +
                 ", email='" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", specialty='" + specialty + '\'' +
-                ", categoryList=" + categoryList +
-                ", keywords=" + keywords +
+                ", phonenumber=" + phonenumber +
                 '}';
     }
 }

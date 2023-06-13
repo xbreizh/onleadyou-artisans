@@ -1,18 +1,15 @@
-package com.onleadyou.artisans.api.dao.impl;
+package com.onleadyou.artisans.api.repository.impl;
 
-import com.onleadyou.artisans.api.dao.contract.ArtisanRepository;
-import com.onleadyou.artisans.api.model.City;
+import com.onleadyou.artisans.api.repository.contract.ArtisanRepository;
 import com.onleadyou.artisans.api.model.Artisan;
 import com.onleadyou.artisans.api.model.SearchCriteria;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 @Repository
-public class ArtisanRepositoryImpl implements ArtisanRepository {
+public class ArtisanRepositoryImpl /*implements ArtisanRepository */{
 
-
-    @Override
+/*    @Override
     public Artisan getArtisanById(long id) {
         System.out.println("reaching controller");
         final Artisan artisan = new Artisan();
@@ -29,10 +26,6 @@ public class ArtisanRepositoryImpl implements ArtisanRepository {
     @Override
     public void updateArtisan(Artisan artisan) {
 
-    }
+    }*/
 
-    @Override
-    public void updateArtisanAddress(long id, City location) {
-
-    }
 }

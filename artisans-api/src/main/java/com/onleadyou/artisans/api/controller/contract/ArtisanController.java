@@ -2,14 +2,16 @@ package com.onleadyou.artisans.api.controller.contract;
 
 
 import com.onleadyou.artisans.api.model.Artisan;
+import com.onleadyou.artisans.api.model.SearchCriteria;
+
+import java.util.Optional;
 
 public interface ArtisanController {
 
-    Artisan getArtisan(long id);
+    Optional<Artisan> getArtisan(long id);
 
-    void addArtisan(Artisan artisan);
+    Optional<Artisan> getArtisan(SearchCriteria criteria);
 
     void updateArtisan(Artisan artisan);
 
-    void removeArtisan(int id);
 }
