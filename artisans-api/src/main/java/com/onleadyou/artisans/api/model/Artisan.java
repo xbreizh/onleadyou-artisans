@@ -16,6 +16,8 @@ public class Artisan {
     private String email;
     private String phonenumber;
 
+    private String keywords;
+
     @ManyToMany
     @JoinTable(
         name = "artisan_city",
@@ -91,16 +93,25 @@ public class Artisan {
         this.jobs = jobs;
     }
 
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
     @Override
     public String toString() {
         return "Artisan{" +
-            "id=" + id +
-            ", company='" + company + '\'' +
-            ", address='" + address + '\'' +
-            ", email='" + email + '\'' +
-            ", phoneNumber='" + phonenumber + '\'' +
-            ", cities=" + cities +
-            ", jobs=" + jobs +
-        '}';
+                "id=" + id +
+                ", company='" + company + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", phonenumber='" + phonenumber + '\'' +
+                ", keywords='" + keywords + '\'' +
+                ", cities=" + cities +
+                ", jobs=" + jobs +
+                '}';
     }
 }
