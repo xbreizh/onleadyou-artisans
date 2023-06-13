@@ -27,7 +27,7 @@ public final class Job {
 
     @Override
     public String toString() {
-        return "WorkCategory{" +
+        return "Job{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
