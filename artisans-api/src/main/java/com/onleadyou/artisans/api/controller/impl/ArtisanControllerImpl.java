@@ -16,14 +16,14 @@ public class ArtisanControllerImpl implements ArtisanController {
 
     final ArtisanService artisanService;
 
-    public ArtisanControllerImpl(ArtisanService artisanService) {
+    public ArtisanControllerImpl(final ArtisanService artisanService) {
         this.artisanService = artisanService;
     }
 
     @Override
     @GetMapping(value = "/{id}")
     public Optional<Artisan> getArtisanById(@PathVariable("id") final long id) {
-        return artisanService.getArtisanById(1);
+        return artisanService.getArtisanById(id);
     }
 
     @Override

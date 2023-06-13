@@ -29,7 +29,7 @@ public class ArtisanServiceImpl implements ArtisanService {
     }
 
     @Override
-    public void updateArtisan(Artisan artisan) {
+    public void updateArtisan(final Artisan artisan) {
         repository.updateArtisan(artisan);
     }
 }
