@@ -14,5 +14,4 @@ public interface ArtisanRepository {
     List<Artisan> searchUserByCriteria(SearchCriteria criteria);
 
     void updateArtisan(Artisan artisan);
-
 }

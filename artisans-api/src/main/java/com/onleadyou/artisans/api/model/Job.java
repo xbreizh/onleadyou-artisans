@@ -3,8 +3,7 @@ package com.onleadyou.artisans.api.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "workcategory")
-public final class WorkCategory {
+public final class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

@@ -1,10 +1,7 @@
 package com.onleadyou.artisans.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.List;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Artisan {
@@ -22,6 +19,22 @@ public class Artisan {
 
     private String email;
     private String phonenumber;
+
+    @ManyToMany
+    @JoinTable(
+        name = "artisan_city",
+        joinColumns = @JoinColumn(name = "artisan_id"),
+        inverseJoinColumns = @JoinColumn(name = "city_id")
+    )
+    private Set<City> cities;
+
+    @ManyToMany
+    @JoinTable(
+            name = "artisan_job",
+            joinColumns = @JoinColumn(name = "artisan_id"),
+            inverseJoinColumns = @JoinColumn(name = "job_id")
+    )
+    private Set<Job> jobs;
 
     public Artisan() {
     }
@@ -66,6 +79,22 @@ public class Artisan {
         this.phonenumber = phonenumber;
     }
 
+    public Set<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(Set<City> cities) {
+        this.cities = cities;
+    }
+
+    public Set<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(Set<Job> jobs) {
+        this.jobs = jobs;
+    }
+
     @Override
     public String toString() {
         return "Artisan{" +
@@ -73,7 +102,9 @@ public class Artisan {
                 ", company='" + company + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
-                ", phonenumber=" + phonenumber +
+                ", phonenumber='" + phonenumber + '\'' +
+                ", cities=" + cities +
+                ", jobs=" + jobs +
                 '}';
     }
 }

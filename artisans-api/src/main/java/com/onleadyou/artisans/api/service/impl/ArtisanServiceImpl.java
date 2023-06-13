@@ -32,5 +32,4 @@ public class ArtisanServiceImpl implements ArtisanService {
     public void updateArtisan(Artisan artisan) {
         repository.updateArtisan(artisan);
     }
-    
 }

@@ -33,6 +33,7 @@ public class ArtisanControllerImpl implements ArtisanController {
     }
 
     @Override
+    @PutMapping
     public void updateArtisan(@RequestBody final Artisan artisan) {
         artisanService.updateArtisan(artisan);
     }
