@@ -16,6 +16,8 @@ public class Artisan {
     private String email;
     private String phonenumber;
 
+    private String contactperson;
+
     private String keywords;
 
     @ManyToMany
@@ -101,17 +103,26 @@ public class Artisan {
         this.keywords = keywords;
     }
 
+    public String getContactPerson() {
+        return contactperson;
+    }
+
+    public void setContactPerson(String contactperson) {
+        this.contactperson = contactperson;
+    }
+
     @Override
     public String toString() {
         return "Artisan{" +
-                "id=" + id +
-                ", company='" + company + '\'' +
-                ", address='" + address + '\'' +
-                ", email='" + email + '\'' +
-                ", phonenumber='" + phonenumber + '\'' +
-                ", keywords='" + keywords + '\'' +
-                ", cities=" + cities +
-                ", jobs=" + jobs +
-                '}';
+            "id=" + id +
+            ", company='" + company + '\'' +
+            ", address='" + address + '\'' +
+            ", email='" + email + '\'' +
+            ", phonenumber='" + phonenumber + '\'' +
+            ", contactPerson='" + contactperson + '\'' +
+            ", keywords='" + keywords + '\'' +
+            ", cities=" + cities +
+            ", jobs=" + jobs +
+        '}';
     }
 }

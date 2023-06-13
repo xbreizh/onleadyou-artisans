@@ -20,12 +20,12 @@ VALUES
 INSERT
 INTO
     "artisan"
-    ("company", "email", "phonenumber", "address", "keywords")
+    ("company", "contactperson", "email", "phonenumber", "address", "keywords")
 VALUES
-   ('compagnie A', 'companya@test.com', '33856554877', '2, rue du moulin', 'carrelage'),
-   ('compagnie B', 'companyb@test.com', '33856554878', '55, avenue bourguignon', 'bois, alu, pvc'),
-   ('compagnie C', 'companyc@test.com', '33856554879', '28, plage sic', ''),
-   ('compagnie D', 'companyd@test.com', '33856554875', '45, rue de Lyon', 'ravalement');
+   ('compagnie A', 'Jean-Paul Marso', 'companya@test.com', '33856554877', '2, rue du moulin', 'carrelage'),
+   ('compagnie B', 'Maurice Moss', 'companyb@test.com', '33856554878', '55, avenue bourguignon', 'bois, alu, pvc'),
+   ('compagnie C', 'Delphine Rouvier', 'companyc@test.com', '33856554879', '28, plage sic', ''),
+   ('compagnie D', 'Henri Ford', 'companyd@test.com', '33856554875', '45, rue de Lyon', 'ravalement');
 
 
 INSERT
