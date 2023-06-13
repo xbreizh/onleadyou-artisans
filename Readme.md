@@ -6,6 +6,10 @@ The project is a Springboot application that deploys a simple API allowing to:
 
 It uses a H2 database which is filled with some sample data (see data.sql)
 It deploys on port 8081 by default (both the api and the database) but that can be changed within the application.properties (server.port)
+There's an authentication layer that requires a Basic header:
+```
+Authorization: Basic YWRtaW4=
+``` 
 
 _Query example:_
 

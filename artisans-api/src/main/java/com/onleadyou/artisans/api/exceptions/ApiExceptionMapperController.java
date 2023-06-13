@@ -3,6 +3,7 @@ package com.onleadyou.artisans.api.exceptions;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
@@ -29,5 +30,13 @@ public final class ApiExceptionMapperController extends ResponseEntityExceptionH
     {
         return handleExceptionInternal(ex, ex.getMessage(),
                 new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
+
+    @ExceptionHandler(value = {BadCredentialsException.class})
+    private ResponseEntity<Object> handleCustomException(
+            final BadCredentialsException ex, final WebRequest request)
+    {
+        return handleExceptionInternal(ex, ex.getMessage(),
+                new HttpHeaders(), HttpStatus.UNAUTHORIZED, request);
     }
 }
